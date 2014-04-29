@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.submission.model;
+package uk.ac.ebi.pride.archive.submission.model.submission;
 
 /**
  * Different upload method

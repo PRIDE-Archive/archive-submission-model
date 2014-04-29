@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>uk.ac.ebi.pride.maven</groupId>
         <artifactId>pride-base-master</artifactId>
@@ -23,6 +22,10 @@
         <developerConnection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride_r/prider-submission-model/trunk</developerConnection>
         <url>https://svn.ebi.ac.uk/pride-repo/pride_r/prider-ws-model/trunk</url>
     </scm>
+
+    <properties>
+        <prider-data-provider-api.version>1.1.2</prider-data-provider-api.version>
+    </properties>
 
     <build>
         <plugins>
@@ -52,6 +55,14 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.ac.ebi.pride.prider</groupId>
+            <artifactId>prider-data-provider-api</artifactId>
+            <version>${prider-data-provider-api.version}</version>
+        </dependency>
+    </dependencies>
 
     <repositories>
         <!-- EBI repo -->

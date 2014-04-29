@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.submission.model;
+package uk.ac.ebi.pride.archive.submission.model.submission;
 
 import java.io.Serializable;
 
@@ -9,10 +9,7 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class SubmissionReferenceDetail implements Serializable {
-    private String reference;
-
-    public SubmissionReferenceDetail() {
-    }
+    private final String reference;
 
     public SubmissionReferenceDetail(String reference) {
         this.reference = reference;

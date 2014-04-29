@@ -1,4 +1,4 @@
-package uk.ac.ebi.pride.archive.submission.model;
+package uk.ac.ebi.pride.archive.submission.model.submission;
 
 import java.io.Serializable;
 
@@ -9,12 +9,9 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class DropBoxDetail implements Serializable{
-    private String dropBoxDirectory;
-    private String userName;
-    private String password;
-
-    public DropBoxDetail() {
-    }
+    private final String dropBoxDirectory;
+    private final String userName;
+    private final String password;
 
     public DropBoxDetail(String dropBoxDirectory, String userName, String password) {
         this.dropBoxDirectory = dropBoxDirectory;
@@ -32,18 +29,6 @@ public class DropBoxDetail implements Serializable{
 
     public String getPassword() {
         return password;
-    }
-
-    public void setDropBoxDirectory(String dropBoxDirectory) {
-        this.dropBoxDirectory = dropBoxDirectory;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     @Override

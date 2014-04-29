@@ -11,11 +11,14 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class ContactDetail implements Serializable {
-    private final String email;
-    private final Title title;
-    private final String firstName;
-    private final String lastName;
-    private final String affiliation;
+    private String email;
+    private Title title;
+    private String firstName;
+    private String lastName;
+    private String affiliation;
+
+    public ContactDetail() {
+    }
 
     public ContactDetail(String email,
                          Title title,
@@ -47,6 +50,26 @@ public class ContactDetail implements Serializable {
 
     public String getAffiliation() {
         return affiliation;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTitle(Title title) {
+        this.title = title;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAffiliation(String affiliation) {
+        this.affiliation = affiliation;
     }
 
     @Override

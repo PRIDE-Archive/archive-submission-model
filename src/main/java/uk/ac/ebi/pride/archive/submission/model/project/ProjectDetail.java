@@ -9,7 +9,10 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class ProjectDetail implements Serializable {
-    private final String accession;
+    private String accession;
+
+    public ProjectDetail() {
+    }
 
     public ProjectDetail(String accession) {
         this.accession = accession;
@@ -17,6 +20,10 @@ public class ProjectDetail implements Serializable {
 
     public String getAccession() {
         return accession;
+    }
+
+    public void setAccession(String accession) {
+        this.accession = accession;
     }
 
     @Override

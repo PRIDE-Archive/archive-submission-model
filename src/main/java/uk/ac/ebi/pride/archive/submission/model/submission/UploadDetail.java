@@ -9,11 +9,14 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class UploadDetail implements Serializable {
-    private final UploadMethod method;
-    private final String host;
-    private final int port;
-    private final String folder;
-    private final DropBoxDetail dropBox;
+    private UploadMethod method;
+    private String host;
+    private int port;
+    private String folder;
+    private DropBoxDetail dropBox;
+
+    public UploadDetail() {
+    }
 
     public UploadDetail(UploadMethod method,
                         String host,
@@ -45,6 +48,26 @@ public class UploadDetail implements Serializable {
 
     public DropBoxDetail getDropBox() {
         return dropBox;
+    }
+
+    public void setMethod(UploadMethod method) {
+        this.method = method;
+    }
+
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public void setFolder(String folder) {
+        this.folder = folder;
+    }
+
+    public void setDropBox(DropBoxDetail dropBox) {
+        this.dropBox = dropBox;
     }
 
     @Override

@@ -9,7 +9,10 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class SubmissionReferenceDetail implements Serializable {
-    private final String reference;
+    private String reference;
+
+    public SubmissionReferenceDetail() {
+    }
 
     public SubmissionReferenceDetail(String reference) {
         this.reference = reference;
@@ -17,6 +20,10 @@ public class SubmissionReferenceDetail implements Serializable {
 
     public String getReference() {
         return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
     }
 
     @Override

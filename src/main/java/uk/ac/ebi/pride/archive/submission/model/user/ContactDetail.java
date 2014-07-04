@@ -1,6 +1,7 @@
 package uk.ac.ebi.pride.archive.submission.model.user;
 
-import uk.ac.ebi.pride.prider.dataprovider.person.Title;
+
+import uk.ac.ebi.pride.archive.dataprovider.person.Title;
 
 import java.io.Serializable;
 

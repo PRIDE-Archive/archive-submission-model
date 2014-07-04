@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>uk.ac.ebi.pride.archive</groupId>
-    <artifactId>prider-submission-model</artifactId>
+    <artifactId>archive-submission-model</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <!-- To build the jar file, use:
@@ -18,13 +18,13 @@
     -->
 
     <scm>
-        <connection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride_r/prider-submission-model/trunk</connection>
-        <developerConnection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride_r/prider-submission-model/trunk</developerConnection>
-        <url>https://svn.ebi.ac.uk/pride-repo/pride_r/prider-submission-model/trunk</url>
+        <connection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride_r/archive-submission-model/trunk</connection>
+        <developerConnection>scm:svn:https://svn.ebi.ac.uk/pride-repo/pride_r/archive-submission-model/trunk</developerConnection>
+        <url>https://svn.ebi.ac.uk/pride-repo/pride_r/archive-submission-model/trunk</url>
     </scm>
 
     <properties>
-        <prider-data-provider-api.version>1.1.2</prider-data-provider-api.version>
+        <archive-data-provider-api.version>2.0.1</archive-data-provider-api.version>
     </properties>
 
     <build>
@@ -58,9 +58,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>uk.ac.ebi.pride.prider</groupId>
-            <artifactId>prider-data-provider-api</artifactId>
-            <version>${prider-data-provider-api.version}</version>
+            <groupId>uk.ac.ebi.pride.archive</groupId>
+            <artifactId>archive-data-provider-api</artifactId>
+            <version>${archive-data-provider-api.version}</version>
         </dependency>
     </dependencies>
 

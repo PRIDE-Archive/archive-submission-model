@@ -62,6 +62,7 @@
         <connection>scm:git:https://bitbucket.org/pride-ebi/archive-submission-model.git</connection>
         <developerConnection>scm:git:https://bitbucket.org/pride-ebi/archive-submission-model.git</developerConnection>
         <url>https://bitbucket.org/pride-ebi/archive-submission-model.git</url>
+        <tag>HEAD</tag>
     </scm>
 
 </project>

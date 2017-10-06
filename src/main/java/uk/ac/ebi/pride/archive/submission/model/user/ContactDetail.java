@@ -17,6 +17,8 @@ public class ContactDetail implements Serializable {
     private String firstName;
     private String lastName;
     private String affiliation;
+    private String country;
+    private String orcid;
 
     public ContactDetail() {
     }
@@ -31,6 +33,18 @@ public class ContactDetail implements Serializable {
         this.firstName = firstName;
         this.lastName = lastName;
         this.affiliation = affiliation;
+    }
+
+    public ContactDetail(String email,
+                         Title title,
+                         String firstName,
+                         String lastName,
+                         String affiliation,
+                         String country,
+                         String orcid) {
+        this(email, title, firstName, lastName, affiliation);
+        this.country = country;
+        this.orcid = orcid;
     }
 
     public String getEmail() {
@@ -85,6 +99,21 @@ public class ContactDetail implements Serializable {
         if (!firstName.equals(that.firstName)) return false;
         if (!lastName.equals(that.lastName)) return false;
         if (title != that.title) return false;
+        if(this.country != null) {
+            if(!this.country.equals(that.country)) {
+                return false;
+            }
+        } else if(that.country != null) {
+            return false;
+        }
+
+        if(this.orcid != null) {
+            if(!this.orcid.equals(that.orcid)) {
+                return false;
+            }
+        } else if(that.orcid != null) {
+            return false;
+        }
 
         return true;
     }
@@ -96,6 +125,44 @@ public class ContactDetail implements Serializable {
         result = 31 * result + firstName.hashCode();
         result = 31 * result + lastName.hashCode();
         result = 31 * result + affiliation.hashCode();
+        result = 31 * result + (this.country != null?this.country.hashCode():0);
+        result = 31 * result + (this.orcid != null?this.orcid.hashCode():0);
         return result;
+    }
+
+    /**
+     * Sets new country.
+     *
+     * @param country New value of country.
+     */
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    /**
+     * Gets country.
+     *
+     * @return Value of country.
+     */
+    public String getCountry() {
+        return country;
+    }
+
+    /**
+     * Gets orcid.
+     *
+     * @return Value of orcid.
+     */
+    public String getOrcid() {
+        return orcid;
+    }
+
+    /**
+     * Sets new orcid.
+     *
+     * @param orcid New value of orcid.
+     */
+    public void setOrcid(String orcid) {
+        this.orcid = orcid;
     }
 }

@@ -9,37 +9,37 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class SubmissionReferenceDetail implements Serializable {
-    private String reference;
+  private String reference;
 
-    public SubmissionReferenceDetail() {
-    }
+  public SubmissionReferenceDetail() {}
 
-    public SubmissionReferenceDetail(String reference) {
-        this.reference = reference;
-    }
+  public SubmissionReferenceDetail(String reference) {
+    this.reference = reference;
+  }
 
-    public String getReference() {
-        return reference;
-    }
+  public String getReference() {
+    return reference;
+  }
 
-    public void setReference(String reference) {
-        this.reference = reference;
-    }
+  public void setReference(String reference) {
+    this.reference = reference;
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof SubmissionReferenceDetail)) return false;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof SubmissionReferenceDetail)) return false;
 
-        SubmissionReferenceDetail that = (SubmissionReferenceDetail) o;
+    SubmissionReferenceDetail that = (SubmissionReferenceDetail) o;
 
-        if (reference != null ? !reference.equals(that.reference) : that.reference != null) return false;
+    if (reference != null ? !reference.equals(that.reference) : that.reference != null)
+      return false;
 
-        return true;
-    }
+    return true;
+  }
 
-    @Override
-    public int hashCode() {
-        return reference != null ? reference.hashCode() : 0;
-    }
+  @Override
+  public int hashCode() {
+    return reference != null ? reference.hashCode() : 0;
+  }
 }

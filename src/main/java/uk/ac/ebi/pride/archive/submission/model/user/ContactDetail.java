@@ -66,36 +66,36 @@ public class ContactDetail implements Serializable {
     return email;
   }
 
-  public Title getTitle() {
-    return title;
-  }
-
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public String getLastName() {
-    return lastName;
-  }
-
-  public String getAffiliation() {
-    return affiliation;
-  }
-
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public Title getTitle() {
+    return title;
   }
 
   public void setTitle(Title title) {
     this.title = title;
   }
 
+  public String getFirstName() {
+    return firstName;
+  }
+
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+  public String getLastName() {
+    return lastName;
+  }
+
   public void setLastName(String lastName) {
     this.lastName = lastName;
+  }
+
+  public String getAffiliation() {
+    return affiliation;
   }
 
   public void setAffiliation(String affiliation) {
@@ -161,21 +161,21 @@ public class ContactDetail implements Serializable {
   }
 
   /**
-   * Sets new country.
-   *
-   * @param country New value of country.
-   */
-  public void setCountry(String country) {
-    this.country = country;
-  }
-
-  /**
    * Gets country.
    *
    * @return Value of country.
    */
   public String getCountry() {
     return country;
+  }
+
+  /**
+   * Sets new country.
+   *
+   * @param country New value of country.
+   */
+  public void setCountry(String country) {
+    this.country = country;
   }
 
   /**
@@ -206,6 +206,15 @@ public class ContactDetail implements Serializable {
   }
 
   /**
+   * Sets new acceptedTermsOfUse.
+   *
+   * @param acceptedTermsOfUse New value of acceptedTermsOfUse.
+   */
+  public void setAcceptedTermsOfUse(Boolean acceptedTermsOfUse) {
+    this.acceptedTermsOfUse = acceptedTermsOfUse;
+  }
+
+  /**
    * Gets acceptedTermsOfUseAt.
    *
    * @return Value of acceptedTermsOfUseAt.
@@ -221,14 +230,5 @@ public class ContactDetail implements Serializable {
    */
   public void setAcceptedTermsOfUseAt(Date acceptedTermsOfUseAt) {
     this.acceptedTermsOfUseAt = acceptedTermsOfUseAt;
-  }
-
-  /**
-   * Sets new acceptedTermsOfUse.
-   *
-   * @param acceptedTermsOfUse New value of acceptedTermsOfUse.
-   */
-  public void setAcceptedTermsOfUse(Boolean acceptedTermsOfUse) {
-    this.acceptedTermsOfUse = acceptedTermsOfUse;
   }
 }

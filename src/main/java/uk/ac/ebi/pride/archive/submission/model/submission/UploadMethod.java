@@ -7,26 +7,26 @@ package uk.ac.ebi.pride.archive.submission.model.submission;
  * @version $Id$
  */
 public enum UploadMethod {
-    FTP("ftp"),
-    ASPERA("aspera");
+  FTP("ftp"),
+  ASPERA("aspera");
 
-    private String method;
+  private String method;
 
-    UploadMethod(String method) {
-        this.method = method;
+  UploadMethod(String method) {
+    this.method = method;
+  }
+
+  public static UploadMethod findMethod(String method) {
+    for (UploadMethod uploadMethod : UploadMethod.values()) {
+      if (uploadMethod.getMethod().equalsIgnoreCase(method)) {
+        return uploadMethod;
+      }
     }
 
-    public String getMethod() {
-        return method;
-    }
+    return null;
+  }
 
-    public static UploadMethod findMethod(String method) {
-        for (UploadMethod uploadMethod : UploadMethod.values()) {
-            if (uploadMethod.getMethod().equalsIgnoreCase(method)) {
-                return uploadMethod;
-            }
-        }
-
-        return null;
-    }
+  public String getMethod() {
+    return method;
+  }
 }

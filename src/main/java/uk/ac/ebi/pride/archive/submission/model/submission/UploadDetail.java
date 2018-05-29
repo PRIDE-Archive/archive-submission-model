@@ -9,90 +9,86 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class UploadDetail implements Serializable {
-    private UploadMethod method;
-    private String host;
-    private int port;
-    private String folder;
-    private DropBoxDetail dropBox;
+  private UploadMethod method;
+  private String host;
+  private int port;
+  private String folder;
+  private DropBoxDetail dropBox;
 
-    public UploadDetail() {
-    }
+  public UploadDetail() {}
 
-    public UploadDetail(UploadMethod method,
-                        String host,
-                        int port,
-                        String folder,
-                        DropBoxDetail dropBox) {
-        this.method = method;
-        this.host = host;
-        this.port = port;
-        this.folder = folder;
-        this.dropBox = dropBox;
-    }
+  public UploadDetail(
+      UploadMethod method, String host, int port, String folder, DropBoxDetail dropBox) {
+    this.method = method;
+    this.host = host;
+    this.port = port;
+    this.folder = folder;
+    this.dropBox = dropBox;
+  }
 
-    public UploadMethod getMethod() {
-        return method;
-    }
+  public UploadMethod getMethod() {
+    return method;
+  }
 
-    public String getHost() {
-        return host;
-    }
+  public void setMethod(UploadMethod method) {
+    this.method = method;
+  }
 
-    public int getPort() {
-        return port;
-    }
+  public String getHost() {
+    return host;
+  }
 
-    public String getFolder() {
-        return folder;
-    }
+  public void setHost(String host) {
+    this.host = host;
+  }
 
-    public DropBoxDetail getDropBox() {
-        return dropBox;
-    }
+  public int getPort() {
+    return port;
+  }
 
-    public void setMethod(UploadMethod method) {
-        this.method = method;
-    }
+  public void setPort(int port) {
+    this.port = port;
+  }
 
-    public void setHost(String host) {
-        this.host = host;
-    }
+  public String getFolder() {
+    return folder;
+  }
 
-    public void setPort(int port) {
-        this.port = port;
-    }
+  public void setFolder(String folder) {
+    this.folder = folder;
+  }
 
-    public void setFolder(String folder) {
-        this.folder = folder;
-    }
+  public DropBoxDetail getDropBox() {
+    return dropBox;
+  }
 
-    public void setDropBox(DropBoxDetail dropBox) {
-        this.dropBox = dropBox;
-    }
+  public void setDropBox(DropBoxDetail dropBox) {
+    this.dropBox = dropBox;
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof UploadDetail)) return false;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof UploadDetail)) return false;
 
-        UploadDetail that = (UploadDetail) o;
+    UploadDetail that = (UploadDetail) o;
 
-        if (port != that.port) return false;
-        if (!dropBox.equals(that.dropBox)) return false;
-        if (!folder.equals(that.folder)) return false;
-        if (!host.equals(that.host)) return false;
-        if (method != that.method) return false;
+    if (port != that.port) return false;
+    if (!dropBox.equals(that.dropBox)) return false;
+    if (!folder.equals(that.folder)) return false;
+    if (!host.equals(that.host)) return false;
+    if (method != that.method) return false;
 
-        return true;
-    }
+    return true;
+  }
 
-    @Override
-    public int hashCode() {
-        int result = method.hashCode();
-        result = 31 * result + host.hashCode();
-        result = 31 * result + port;
-        result = 31 * result + folder.hashCode();
-        result = 31 * result + dropBox.hashCode();
-        return result;
-    }
+  @Override
+  public int hashCode() {
+    int result = method.hashCode();
+    result = 31 * result + host.hashCode();
+    result = 31 * result + port;
+    result = 31 * result + folder.hashCode();
+    result = 31 * result + dropBox.hashCode();
+    return result;
+  }
 }

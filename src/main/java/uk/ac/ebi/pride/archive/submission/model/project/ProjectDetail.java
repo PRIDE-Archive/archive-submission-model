@@ -9,37 +9,36 @@ import java.io.Serializable;
  * @version $Id$
  */
 public class ProjectDetail implements Serializable {
-    private String accession;
+  private String accession;
 
-    public ProjectDetail() {
-    }
+  public ProjectDetail() {}
 
-    public ProjectDetail(String accession) {
-        this.accession = accession;
-    }
+  public ProjectDetail(String accession) {
+    this.accession = accession;
+  }
 
-    public String getAccession() {
-        return accession;
-    }
+  public String getAccession() {
+    return accession;
+  }
 
-    public void setAccession(String accession) {
-        this.accession = accession;
-    }
+  public void setAccession(String accession) {
+    this.accession = accession;
+  }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ProjectDetail)) return false;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof ProjectDetail)) return false;
 
-        ProjectDetail that = (ProjectDetail) o;
+    ProjectDetail that = (ProjectDetail) o;
 
-        if (!accession.equals(that.accession)) return false;
+    if (!accession.equals(that.accession)) return false;
 
-        return true;
-    }
+    return true;
+  }
 
-    @Override
-    public int hashCode() {
-        return accession.hashCode();
-    }
+  @Override
+  public int hashCode() {
+    return accession.hashCode();
+  }
 }

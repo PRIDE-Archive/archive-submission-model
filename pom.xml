@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>uk.ac.ebi.pride.archive</groupId>
     <artifactId>archive-submission-model</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <name>archive-submission-model</name>
 
     <parent>
@@ -35,7 +34,7 @@
         <developerConnection>scm:git:https://bitbucket.org/proteomics-ebi/archive-submission-model.git
         </developerConnection>
         <url>https://bitbucket.org/proteomics-ebi/archive-submission-model.git</url>
-        <tag>HEAD</tag>
+        <tag>archive-submission-model-1.0.3</tag>
     </scm>
 
 </project>

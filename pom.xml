@@ -4,7 +4,7 @@
 
     <groupId>uk.ac.ebi.pride.archive</groupId>
     <artifactId>archive-submission-model</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <name>archive-submission-model</name>
 
     <parent>
@@ -34,7 +34,7 @@
         <developerConnection>scm:git:https://bitbucket.org/proteomics-ebi/archive-submission-model.git
         </developerConnection>
         <url>https://bitbucket.org/proteomics-ebi/archive-submission-model.git</url>
-        <tag>archive-submission-model-1.0.3</tag>
+        <tag>HEAD</tag>
     </scm>
 
 </project>

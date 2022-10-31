@@ -1,6 +1,6 @@
 package uk.ac.ebi.pride.archive.submission.model.user;
 
-import uk.ac.ebi.pride.archive.dataprovider.person.Title;
+import uk.ac.ebi.pride.archive.dataprovider.utils.TitleConstants;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class ContactDetail implements Serializable {
   private String email;
-  private Title title;
+  private TitleConstants title;
   private String firstName;
   private String lastName;
   private String affiliation;
@@ -25,7 +25,7 @@ public class ContactDetail implements Serializable {
   public ContactDetail() {}
 
   public ContactDetail(
-      String email, Title title, String firstName, String lastName, String affiliation) {
+          String email, TitleConstants title, String firstName, String lastName, String affiliation) {
     this.email = email;
     this.title = title;
     this.firstName = firstName;
@@ -35,7 +35,7 @@ public class ContactDetail implements Serializable {
 
   public ContactDetail(
       String email,
-      Title title,
+      TitleConstants title,
       String firstName,
       String lastName,
       String affiliation,
@@ -50,7 +50,7 @@ public class ContactDetail implements Serializable {
 
   public ContactDetail(
       String email,
-      Title title,
+      TitleConstants title,
       String firstName,
       String lastName,
       String affiliation,
@@ -70,11 +70,11 @@ public class ContactDetail implements Serializable {
     this.email = email;
   }
 
-  public Title getTitle() {
+  public TitleConstants getTitle() {
     return title;
   }
 
-  public void setTitle(Title title) {
+  public void setTitle(TitleConstants title) {
     this.title = title;
   }
 

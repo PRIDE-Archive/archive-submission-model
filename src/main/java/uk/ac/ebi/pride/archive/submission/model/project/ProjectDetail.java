@@ -1,5 +1,7 @@
 package uk.ac.ebi.pride.archive.submission.model.project;
 
+import uk.ac.ebi.pride.archive.dataprovider.utils.SubmissionTypeConstants;
+
 import java.io.Serializable;
 
 /**
@@ -10,11 +12,13 @@ import java.io.Serializable;
  */
 public class ProjectDetail implements Serializable {
   private String accession;
+  private SubmissionTypeConstants submissionType;
 
   public ProjectDetail() {}
 
-  public ProjectDetail(String accession) {
+  public ProjectDetail(String accession, SubmissionTypeConstants submissionType) {
     this.accession = accession;
+    this.submissionType = submissionType;
   }
 
   public String getAccession() {
@@ -25,20 +29,11 @@ public class ProjectDetail implements Serializable {
     this.accession = accession;
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (!(o instanceof ProjectDetail)) return false;
-
-    ProjectDetail that = (ProjectDetail) o;
-
-    if (!accession.equals(that.accession)) return false;
-
-    return true;
+  public SubmissionTypeConstants getSubmissionType() {
+    return submissionType;
   }
 
-  @Override
-  public int hashCode() {
-    return accession.hashCode();
+  public void setSubmissionType(SubmissionTypeConstants submissionType) {
+    this.submissionType = submissionType;
   }
 }

@@ -10,7 +10,7 @@
     <parent>
         <groupId>uk.ac.ebi.pride.architectural</groupId>
         <artifactId>pride-core</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.3</version>
     </parent>
 
     <!-- To build the jar file, use:
@@ -18,14 +18,16 @@
     -->
 
     <properties>
-        <archive-data-provider-api.version>2.0.11</archive-data-provider-api.version>
+        <data-provider-api.version>1.0.1-SNAPSHOT</data-provider-api.version>
     </properties>
 
     <dependencies>
         <dependency>
+<!--            <groupId>uk.ac.ebi.pride.archive</groupId>-->
+<!--            <artifactId>archive-data-provider-api</artifactId>-->
             <groupId>uk.ac.ebi.pride.archive</groupId>
-            <artifactId>archive-data-provider-api</artifactId>
-            <version>${archive-data-provider-api.version}</version>
+            <artifactId>data-provider-api</artifactId>
+            <version>${data-provider-api.version}</version>
         </dependency>
     </dependencies>
 
